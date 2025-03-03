@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>자유 게시판</title>
+</head>
+<body>
+<h2>게시판</h2>
+<ul>
+    <li th:each="post : ${posts}">
+        <a th:href="@{/posts/{id}(id=${post.id})}">
+            <h3 th:text="${post.title}"></h3>
+        </a>
+    </li>
+</ul>
+<a href="/posts/create">게시글 작성</a>
+<a href="/auth/logout">로그아웃</a>
+</body>
+</html>

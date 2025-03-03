@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>게시글 작성</title>
+</head>
+<body>
+<h2>게시글 작성</h2>
+<form action="/posts/create" method="post">
+    <input type="text" name="title" placeholder="Title" required>
+    <textarea name="content" placeholder="Content" required></textarea>
+    <button type="submit">작성</button>
+</form>
+<a href="/posts">전체 게시글 보기</a>
+</body>
+</html>
